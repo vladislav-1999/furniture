@@ -262,11 +262,6 @@
 }
 
 .content {
-  &__item-inner {
-    position: relative;
-    
-    transition: all .3s;
-  }
   &__buy-sircle {
     width: 45px;
     height: 45px;
@@ -275,20 +270,35 @@
     justify-content: center;
     border-radius: 50%;
     box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
-    position: relative;
+    transition: .3s;
     &-1 {
       background-color: #fff;
+    }
+    &-1:hover {
+      background-color: #a3bac7;
+    }
+    &-1:hover .content__buy-img path{
+      fill: #fff
     }
     &-2 {
       background-color: #a3bac7;
     }
+    &-2:hover {
+      background-color: #fff;
+    }
+    &-2:hover .content__buy-img path{
+      fill: #a3bac7
+    }
     &-3 {
       background-color: #fff;
     }
+    &-3:hover {
+      background-color: #a3bac7;
+    }
+    &-3:hover .content__buy-img path{
+      fill: #fff
   }
-  &__buy-sircle + .content__buy-sircle {
-    margin-left: 15px;
-  }
+}
   &__item {
     min-width: 270px;
     min-height: 380px;
@@ -298,13 +308,11 @@
     align-items: center;
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
-    z-index: 3;
     position: relative;
     }
-  &__item:hover {
-  transition: all .3s;
-  z-index: 1;
-  }
+    &__item:hover .content__buy {
+      opacity: 1;
+    }
   &-price {
     margin-bottom: 40px;
   }
@@ -314,10 +322,8 @@
     left: 50%;
     top: 50%;
     transform: translateX(-50%);
-    z-index: 2;
-  }
-  &__buy:hover {
-    z-index: 4;
+    opacity: 0;
+    transition: .3s;
   }
   &__img {
     margin-bottom: 75px;
@@ -327,6 +333,9 @@
   }
   &__item-price {
     margin-bottom: 40px;
+  }
+  &__buy-sircle-link + .content__buy-sircle-link {
+    padding-left: 15px;
   }
 }
 
@@ -469,5 +478,19 @@
     border-left: 1px solid $footer;
   }
 }
+
+.test {
+  width: 250px;
+  height: 250px;
+  background-color: green;
+}
+
+.test2 {
+  width: 200px;
+  height: 200px;
+  background-color: yellow;
+}
+
+
 
 @import 'media';
