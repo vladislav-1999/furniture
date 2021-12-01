@@ -2,6 +2,8 @@ $accent: #436372;
 $bg: #fef7f0;
 $footer: #7b7b7b;
 $dark-blue: #243f4d;
+$border: #f6f6f6;
+$basic-blue: #a3bbc8;
 
 %DMSans-400 {
   font-family: 'DMSans-Regular', sans-serif;
@@ -25,4 +27,26 @@ $dark-blue: #243f4d;
 %Rubik-500 {
   font-family: 'Rubik-Medium', sans-serif;
   font-weight: 500;
+}
+
+%btn {
+  border: none;
+  background-color: $basic-blue;
+  display: flex;
+  justify-content: center;
+  padding: 22px 20px 22px 24px;
+  color: #fff;
+  @extend %Rubik-500;
+  font-size: 18px;
+  height: 60px;
+  cursor: pointer;
+}
+
+
+%checkbox-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
 }
